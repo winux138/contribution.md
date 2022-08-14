@@ -122,7 +122,6 @@ utils/collection  | Directory containing the implementation of all collection ty
 utils/concurrency | Directory containing the implementation of mutex, semaphores, conditional variables
 utils/threads     | Directory containing the implementation of threads
 ...               | ...
-```
 
 ### 4.3 Naming of header files and implementation files
 Header files and source files must be prefixed with the name of the library to
