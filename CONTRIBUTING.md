@@ -115,17 +115,11 @@ The following example shows the organisation of directories for a library
 containing utility functions:
 
 Tree structure    | Comment
-------------------|--------
 utils             | Basic directory of the library
-------------------|--------
 utils/includes    | Directory containing all the header files of the library (API)
-------------------|--------
 utils/collection  | Directory containing the implementation of all collection type data structures (lists, stack, array, hash table, etc.)
-------------------|--------
 utils/concurrency | Directory containing the implementation of mutex, semaphores, conditional variables
-------------------|--------
 utils/threads     | Directory containing the implementation of threads
-------------------|--------
 ...               | ...
 ```
 
@@ -195,45 +189,25 @@ The following table shows the prefixes for the variable names according to
 type, as well as an example for each type of variable:
 
 Prefix | Variable type                    | Example
--------|----------------------------------|--------
 i8     | Signed 8-bit integer             | int8_t i8_byte = 0;
--------|----------------------------------|--------
 ui8    | Unsigned 8-bit integer           | uint8_t ui8_byte = 0U;
--------|----------------------------------|--------
 i16    | Signed 16-bit integer            | int16_t i16_option = 0;
--------|----------------------------------|--------
 ui16   | Unsigned 16-bit integer          | uint16_t ui16_port = 0U;
--------|----------------------------------|--------
 i32    | Signed 32-bit integer            | int32_t i32_value = 0L;
--------|----------------------------------|--------
 ui32   | Unsigned 32-bit integer          | uint32_t ui32_counter = 0UL;
--------|----------------------------------|--------
 i64    | Signed 64-bit integer            | int64_t i64_big_value = 0LL;
--------|----------------------------------|--------
 ui64   | Unsigned 64-bit integer          | uint64_t ui64_big_counter = 0ULL;
--------|----------------------------------|--------
 b      | Boolean bool                     | b_is_set = false;
--------|----------------------------------|--------
 c      | Character char                   | c_letter = ’\0’;
--------|----------------------------------|--------
 f      | Float float                      | f_value = 0.0f;
--------|----------------------------------|--------
 d      | Double double                    | d_precised_result = 0.0d;
--------|----------------------------------|--------
 sz     | Type size_t                      | size_t sz_string_length = 0U;
--------|----------------------------------|--------
 e      | Enumerated type  variable        | status_t e_status_code = STATUS_ERR;
--------|----------------------------------|--------
 st     | Structure type variable          | linked_list_t st_list;
--------|----------------------------------|--------
 a      | Array                            | uint32_t a_values[10];
--------|----------------------------------|--------
 p      | Pointer type variable            | linked_list_t* p_list = NULL;
--------|----------------------------------|--------
 pp     | Pointer of pointer type variable | linked_list_t** pp_list = NULL;
--------|----------------------------------|--------
 s      | String type variable             |char* s_message = NULL;
--------|----------------------------------|--------
 ws     | String type variable             | in unicode wchar_t* ws_message = NULL;
 
 ## 5 Documentation
