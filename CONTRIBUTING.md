@@ -115,6 +115,7 @@ The following example shows the organisation of directories for a library
 containing utility functions:
 
 Tree structure    | Comment
+------------------|--------
 utils             | Basic directory of the library
 utils/includes    | Directory containing all the header files of the library (API)
 utils/collection  | Directory containing the implementation of all collection type data structures (lists, stack, array, hash table, etc.)
@@ -189,6 +190,7 @@ The following table shows the prefixes for the variable names according to
 type, as well as an example for each type of variable:
 
 Prefix | Variable type                    | Example
+-------|----------------------------------|--------
 i8     | Signed 8-bit integer             | int8_t i8_byte = 0;
 ui8    | Unsigned 8-bit integer           | uint8_t ui8_byte = 0U;
 i16    | Signed 16-bit integer            | int16_t i16_option = 0;
