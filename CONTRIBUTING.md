@@ -34,12 +34,12 @@ Good example :
 ```C
 ...
 uint32_t processing_function (
-    linked_list_t* p_param1,
+    linked_list_t *p_param1,
     uint32_t ui32_param2,
-    const unsigned char* s_param3)
+    const unsigned char *s_param3)
 {
     uint32_t ui32_result = 0;
-    element_t* pp_out_param4 = NULL;
+    element_t *pp_out_param4 = NULL;
     if (( NULL == p_param1) || (NULL == s_param3))
     {
         ui32_result = 0;
@@ -177,8 +177,8 @@ function must be separated by the underscore character. The name of a function
 must be written in lower case.\
 Good example
 ```C
-status_t utils_linked_list_create (linked_list_t** pp_list);
-status_t utils_linked_list_delete (linked_list_t* pp_list);
+status_t utils_linked_list_create (linked_list_t **pp_list);
+status_t utils_linked_list_delete (linked_list_t *pp_list);
 ```
 
 ### 4.7 Naming of variables
@@ -206,10 +206,10 @@ sz     | Type size_t                      | size_t sz_string_length = 0U;
 e      | Enumerated type  variable        | status_t e_status_code = STATUS_ERR;
 st     | Structure type variable          | linked_list_t st_list;
 a      | Array                            | uint32_t a_values[10];
-p      | Pointer type variable            | linked_list_t* p_list = NULL;
-pp     | Pointer of pointer type variable | linked_list_t** pp_list = NULL;
-s      | String type variable             |char* s_message = NULL;
-ws     | String type variable             | in unicode wchar_t* ws_message = NULL;
+p      | Pointer type variable            | linked_list_t *p_list = NULL;
+pp     | Pointer of pointer type variable | linked_list_t **pp_list = NULL;
+s      | String type variable             |char *s_message = NULL;
+ws     | String type variable             | in unicode wchar_t *ws_message = NULL;
 
 ## 5 Documentation
 
@@ -281,7 +281,7 @@ The following lines show the minimum documentation for a header file.
 # define UTILS_LINKED_LIST_H
 
 /*!
- * @file linked_list .h
+ * @file linked_list.h
  * @author DEV 1
  *
  * @brief Linked List
@@ -309,9 +309,9 @@ typedef enum status_tag {
  */
 typedef struct linked_list_element_tag
 {
-    struct linked_list_element_tag* pNext;     //!< next element
-    struct linked_list_element_tag* pPrevious; //!< previous element
-    void* pData;                                //!< data of the element
+    struct linked_list_element_tag *pNext;     //!< next element
+    struct linked_list_element_tag *pPrevious; //!< previous element
+    void *pData;                               //!< data of the element
 } linked_list_element_t;
 
 /*!
@@ -321,8 +321,8 @@ typedef struct linked_list_element_tag
  */
 typedef struct linked_list_tag
 {
-    linked_list_element_t* pHead; //!< first element
-    linked_list_element_t* pTail; //!< last element
+    linked_list_element_t *pHead; //!< first element
+    linked_list_element_t *pTail; //!< last element
 } linked_list_t;
 
 /*!
@@ -336,13 +336,13 @@ typedef struct linked_list_tag
  * @return # STATUS_SUCCESS the creation and the initialization are done with
  success
  * @return # STATUS_INVALID_PARAM if ppList is NULL or
- * if (*ppList ) != NULL
+ * if (*ppList) != NULL
  * @return # STATUS_MEMORY_ERROR fail of the memory allocation
- * @pre ppList != NULL and (*ppList ) == NULL
+ * @pre ppList != NULL and (*ppList) == NULL
  * @note the created list has to be deleted
  * by calling #utils_linked_list_delete
  */
-status_t utils_linked_list_create (linked_list_t** ppList);
+status_t utils_linked_list_create (linked_list_t **ppList);
 
 /*!
  * @brief Deletion of the list
@@ -352,12 +352,11 @@ status_t utils_linked_list_create (linked_list_t** ppList);
  *
  * @param [in, out] ppList the list to delete .
  * @return # STATUS_SUCCESS if the deletion of the list is a success
- * @return # STATUS_INVALID_PARAM if ppList is NULL
- * or if (*ppList ) is NULL
- * @pre ppList != NULL and (*ppList ) != NULL
- * @post (*ppList ) == NULL
+ * @return # STATUS_INVALID_PARAM if ppList is NULL or if (*ppList) is NULL
+ * @pre ppList != NULL and (*ppList) != NULL
+ * @post (*ppList) == NULL
  */
-status_t utils_linked_list_delete (linked_list_t** ppList);
+status_t utils_linked_list_delete (linked_list_t **ppList);
 ...
 
 /*! @} */
